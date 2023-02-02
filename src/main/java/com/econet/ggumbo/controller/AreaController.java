@@ -33,11 +33,11 @@ public class AreaController {
     public ResponseEntity<Area> saveArea(@RequestBody Area area){
         return new ResponseEntity<Area>(areaService.save(area),HttpStatus.CREATED);
     }
-    @GetMapping("/area")
+    @GetMapping("/getallarea")
     public List<Area> getAll(){
         return areaService.getAll();
     }
-    @GetMapping("/area/{id}")
+    @GetMapping("/getareabyid/{id}")
     public ResponseEntity<Area> getAreaById(@PathVariable("id") Long areaId){
         return new ResponseEntity<>(areaService.getAreaById(areaId), HttpStatus.OK);
     }

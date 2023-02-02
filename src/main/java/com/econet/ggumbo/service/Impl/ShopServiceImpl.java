@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ShopServiceImpl implements ShopService {
     @Autowired
-    ShopRepository shopRepository;
+    public ShopRepository shopRepository;
 
     @Override
     public List<Shop> getAll() {
